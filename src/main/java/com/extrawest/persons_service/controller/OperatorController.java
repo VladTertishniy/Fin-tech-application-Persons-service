@@ -1,4 +1,4 @@
-package com.extrawest.persons_service;
+package com.extrawest.persons_service.controller;
 
 import com.extrawest.persons_service.model.dto.request.OperatorRequestDto;
 import com.extrawest.persons_service.model.dto.response.DeleteResponseDto;
