@@ -19,6 +19,7 @@
 		<org.lombok.version>1.18.24</org.lombok.version>
 		<lombok.mapstruct.version>0.2.0</lombok.mapstruct.version>
 		<maven.plugin.version>3.8.0</maven.plugin.version>
+		<feign.version>3.1.2</feign.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -74,6 +75,30 @@
 			<artifactId>lombok</artifactId>
 			<version>${org.lombok.version}</version>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>stomp-websocket</artifactId>
+			<version>2.3.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.14.0-rc2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.datatype</groupId>
+			<artifactId>jackson-datatype-jsr310</artifactId>
+			<version>2.13.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>${feign.version}</version>
 		</dependency>
 	</dependencies>
 
