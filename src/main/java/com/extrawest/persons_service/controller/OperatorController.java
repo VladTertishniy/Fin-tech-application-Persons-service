@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping(PathUtil.OPERATORS_ROOT_PATH)
@@ -30,9 +31,14 @@ public class OperatorController {
         return ResponseEntity.ok(operatorService.getById(id));
     }
 
-    @GetMapping(PathUtil.GET_ALL_PATH)
-    public ResponseEntity<Page<OperatorResponseDto>> getAll(@PageableDefault Pageable pageable) {
+    @GetMapping(PathUtil.GET_ALL_ON_PAGE_PATH)
+    public ResponseEntity<Page<OperatorResponseDto>> getAllOnPage(@PageableDefault Pageable pageable) {
         return ResponseEntity.ok(operatorService.getAll(pageable));
+    }
+
+    @GetMapping(PathUtil.GET_ALL_PATH)
+    public ResponseEntity<List<OperatorResponseDto>> getAll() {
+        return ResponseEntity.ok(operatorService.getAll());
     }
 
     @GetMapping(PathUtil.DELETE_PATH)
