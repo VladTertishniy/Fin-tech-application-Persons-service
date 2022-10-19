@@ -14,9 +14,6 @@ import javax.persistence.*;
 @ToString
 @NoArgsConstructor
 public class Operator extends Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private String sellPointIdentifier;
+    private Long sellPointIdentifier;
     private String taxpayerNumber;
 }
