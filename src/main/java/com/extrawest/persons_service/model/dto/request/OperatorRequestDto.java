@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
+import javax.validation.constraints.Positive;
 import java.time.LocalDateTime;
 
 @Getter
@@ -20,8 +21,8 @@ public class OperatorRequestDto {
     @NotNull
     @Past
     private LocalDateTime dateOfBirth;
-    @NotBlank
-    private String sellPointIdentifier;
+    @Positive
+    private Long sellPointIdentifier;
     @NotBlank
     private String taxpayerNumber;
 }
